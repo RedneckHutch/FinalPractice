@@ -1,0 +1,64 @@
+
+#  Question 1  - what type of variable is DISCOUNT_PERCENTAGE? 
+#  CONST
+DISCOUNT_PERCENTAGE = 0.20
+
+# The main function.
+def main():
+    # Question 2 - what does this line of code do?
+    # This line of code is setting whatever the function get_regular_price()
+    # to variable named reg_price
+    reg_price = get_regular_price()
+
+    # Question 3 - what does this line of code do?
+    # This line is making a variable to store a calculation of reg price and
+    # the function discount price.
+	
+	# Question 4 - what is the term that refers to (reg_price)
+    # return type
+	
+	# Question 5 - what happens because (reg_price) is included in this function call?
+    # it allows the function to find the information store in red_price
+    # and will use it to execute the functions code.
+    sale_price = reg_price - discount(reg_price)
+
+    # Question 6 - what is accomplished with the following line of code?
+    # Prints out "The sale price is $", then it formats how many decimals 
+    # sale and price will go out to which in this case is .00
+    # and then seperates
+	
+	# Question 7 - explain what impact it has to add .2f
+    # Huge impact it allows a number like 18.3333333 to only go
+    # to to decimal places like 18.33
+    print('The sale price is $', format(sale_price, ',.2f'), sep='')
+
+# Question 8 - what does this block of code accomplish?
+# It ask the user to enter an items price and store ut as price, then returns it.
+
+# Question 9 - what does the code return price accomplish?
+# returning it allows it to be used within other functions and stored outside the function.
+def get_regular_price():
+    price = float(input("Enter the item's regular price: "))
+    return price
+
+# Question 10 - what does this block of code accomplish?
+# this code computes the after it is discounted
+
+# Question 11 - what is the term for (price)?
+# price is the term which is returned from get_regular_price()
+
+# Question 12 - what does the code return price * DISCOUNT_PERCENTAGE do?
+# It returns the value of the calculation and and stores it as price once again,
+# this will replace the prior value that was held to the variable price.
+def discount(price):
+    return price * DISCOUNT_PERCENTAGE
+
+# Question 13 - what does the following line of code accomplish?
+# this line of code is calling the main function this is where you would
+# put all your function callings in order to get them to run correctly
+main()
+
+# Question 14 - Explain in your own words what this program accomplishes
+# This program gets a const discount price and then ask the user for a price.
+# Then the program computes the new price after applying the discount and stores
+# it as price.
